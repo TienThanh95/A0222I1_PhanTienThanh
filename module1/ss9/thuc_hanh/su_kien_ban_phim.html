@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="docReady()">
+<form>
+    <img id="xuka" src="anh-dep-xuka_105625082.jpg" style="position: absolute;left: 0;top: 0"; height="100"width="80"/>
+</form>
+<script>
+    function upArrowPressed() {
+        let element=document.getElementById("xuka");
+        element.style.top=parseInt(element.style.top) - 5 + 'px';
+    }
+    function dowtArrowPressed() {
+        let element=document.getElementById("xuka");
+        element.style.top=parseInt(element.style.top) + 5 + 'px';
+    }
+    function leftArrowPresses() {
+        let element=document.getElementById("xuka");
+        element.style.top=parseInt(element.style.top) - 5 + 'px';
+    }
+    function rightArrowPresses() {
+        let element = document.getElementById("xuka");
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+        case 37:
+            leftArrowPresses();
+            break;
+        case 39:
+            rightArrowPresses();
+            break;
+        case 38:
+            upArrowPressed();
+            break;
+        case 40:
+            dowtArrowPressed();
+            break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown',moveSelection);
+    }
+
+</script>
+</body>
+</html>

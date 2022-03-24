@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<form>
+    <table border="1" style="width: 500px;height: 100px">
+        <tr style="height:50px">
+            <th id="name" colspan="4"></th>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="abc('1')" name="q" value="1" style="width: 98%">1</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('2')" name="q" value="2" style="width: 98%">2</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('3')" name="q" value="3" style="width: 98%">3</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('+')" name="q" value="+" style="width: 98%">+</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="abc('4')" name="q" value="4" style="width: 98%">4</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('5')" name="q" value="5" style="width: 98%">5</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('6')" name="q" value="6" style="width: 98%">6</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('-')" name="q" value="-" style="width: 98%">-</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="abc('7')" name="q" value="7" style="width: 98%">7</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('8')" name="q" value="8" style="width: 98%">8</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('9')" name="q" value="9" style="width: 98%">9</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('*')" name="q" value="x" style="width: 98%">x</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="button" onclick="ab('C')" name="q" value="C" style="width: 98%">C</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('0')" name="q" value="0" style="width: 98%">0</button>
+            </td>
+            <td>
+                <button type="button" onclick="bc('=')" name="q" value="=" style="width: 98%">=</button>
+            </td>
+            <td>
+                <button type="button" onclick="abc('/')" name="q" value="/" style="width: 98%">/</button>
+            </td>
+        </tr>
+    </table>
+</form>
+<script>
+    function abc(val) {
+        document.getElementById("name").innerHTML +=val;
+    }
+    function bc() {
+        let y =document.getElementById("name").innerHTML;
+        let x= eval(y);
+        document.getElementById("name").innerHTML =x;
+    }
+    function ab() {
+        document.getElementById("name").innerHTML = null;
+    }
+</script>
+
+</body>
+</html>

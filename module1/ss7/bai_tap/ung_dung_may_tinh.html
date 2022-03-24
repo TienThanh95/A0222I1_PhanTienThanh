@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Caculator</h2>
+<form>
+    <input id="trai" type="number" name="q">
+    <input id="phai" type="number" name="q"><br/>
+    <button type="button" name="q" onclick="cong()" value="Addition">Addition(+)</button>
+    <button type="button" name="q" onclick="tru()" value="Subtraction">Subtraction(-)</button>
+    <button type="button" name="q" onclick="nhan()" value="Multiplication">Multiplication(x)</button>
+    <button type="button" name="q" onclick="chia()" value="Division">Division(/)</button> <br/>
+
+    <p id="hienthi"></p>
+    <p id="ketqua"></p>
+
+</form>
+<script>
+    function cong() {
+        let a = document.getElementById("trai").value;
+        a = parseInt(a);
+        let b = document.getElementById("phai").value;
+        b = parseInt(b);
+        let total = a+b;
+        document.getElementById("hienthi").innerText = "addition";
+        document.getElementById("ketqua").innerHTML = total;
+    }
+</script>
+</body>
+</html>

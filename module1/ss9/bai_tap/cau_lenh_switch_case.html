@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+            <input type="number" id="num" name="q">
+
+            <input type="button" value="Tính số ngày" onclick="abc()"name="q"/>
+
+    <p  id="max"></p>
+
+</form>
+<script>
+
+    function abc(){
+        let  number = parseInt(document.getElementById("num").value);
+        switch (number) {
+            case 1:
+                document.getElementById("max").innerHTML = "30";
+            break;
+            case 2:
+                document.getElementById("max").innerHTML = "28,29";
+            break;
+            case 3:
+                document.getElementById("max").innerHTML = "31";
+            break;
+            case 4:
+                document.getElementById("max").innerHTML = "30";
+            break;
+            case 5:
+                document.getElementById("max").innerHTML = "31";
+            break;
+            case 6:
+                document.getElementById("max").innerHTML = "30";
+            break;
+            case 7:
+                document.getElementById("max").innerHTML = "31";
+            break;
+            case 8:
+                document.getElementById("max").innerHTML = "30";
+            break;
+            case 9:
+                document.getElementById("max").innerHTML = "31";
+            break;
+            case 10:
+                document.getElementById("max").innerHTML = "30";
+            break;
+            case 11:
+                document.getElementById("max").innerHTML = "31";
+            break;
+            case 12:
+                document.getElementById("max").innerHTML = "30";
+            break;
+        }
+    }
+
+
+</script>
+</body>
+</html>

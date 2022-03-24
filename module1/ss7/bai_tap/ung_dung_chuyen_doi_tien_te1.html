@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="money" placeholder="nhập tiền">
+<select id="from">
+    <option value="vn">Việt Nam</option>
+    <option value="usd">Đô la Mỹ</option>
+</select>
+<select id="to">
+    <option value="vn">Việt Nam</option>
+    <option value="usd">Đô la Mỹ</option>
+</select>
+<button onclick="chuyentien()">Chuyển đổi</button>
+<p id="ketqua"></p>
+<script>
+    function chuyentien() {
+        let money = document.getElementById("money").value;
+        let from = document.getElementById("from").value;
+        let to = document.getElementById("to").value;
+        let result = 0;
+
+        if (from == "vn" && to == 'usd') {
+            result = money / 23000;
+        } else if (from == "usd" && to == 'vn') {
+            result = money * 23000;
+        } else {
+            result = money;
+        }
+        document.getElementById("ketqua").innerText = result;
+    }
+</script>
+</body>
+</html>
