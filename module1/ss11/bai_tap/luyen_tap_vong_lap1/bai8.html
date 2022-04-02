@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <button type="button" onclick="play()" name="q" ; value="Chơi">Chơi</button>
+</form>
+<script>
+    function play() {
+        let khoangduoi = parseInt(prompt("Nhập khoảng dưới: "));
+        let khoangtren = parseInt(prompt("Nhập khoảng trên :"));
+        //Math.random() trả về các giá trị ngẫu nhiên từ 0.0001 -> 0.9999
+        //vd: khoangTren: 5 khoangDuoi: 2
+        //(khoangTren - khoangDuoi + 1) = 4
+        //Math.random() * (khoangTren - khoangDuoi + 1) trả về các giá trị ngẫu nhiên từ
+        //0.0004 -> 3.9999
+        //Math.random() * (khoangTren - khoangDuoi + 1) + khoangDuoi trả về các giá trị ngẫu nhiên từ
+        //2.0004 -> 5.9999
+        let random= Math.floor(Math.random()*(khoangtren - khoangduoi + 1) + khoangduoi);
+        let dem = 0;
+        do {
+            let n = parseInt(prompt("Nhập số bạn đoán"));
+            if (random==n) {
+                alert("Chúc mừng bạn đoán đúng");
+                break;
+            } else if (random>n) {
+                alert("Số bạn nhập nhỏ hơn");
+                dem++;
+            } else {
+                alert("Số bạn nhập lớn hơn");
+                dem++;
+            }
+            if (dem>=3) {
+                alert("Trò chơi kết thúc");
+                break;
+            }
+        } while (true)
+
+    }
+</script>
+</body>
+</html>
